@@ -1,0 +1,263 @@
+
+.main{
+    display: grid;
+    margin: -10px;
+    background: white;
+    grid-template-columns: 120px 3fr 100px;
+    grid-template-rows: 70px 30px 500px 50px;
+    grid-template-areas:
+            " h h h "
+            " L_c navi R_c "
+            " L_c b R_c "
+            " f f f ";
+}
+
+.navi{
+    grid-area: navi;
+    background: darkslategray;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+    margin-right: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+            " ul search ";
+
+}
+
+.navi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: ghostwhite;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 390px;
+    margin-left: 3px;
+    grid-area: ul;
+    margin-bottom: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.navi ul li {
+    display: inline;
+    float: left;
+}
+
+.navi ul li a {
+    display: block;
+    color: darkslategray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navi ul li a:hover {
+    background-color: crimson;
+    color: white;
+}
+
+.dropDown{
+    position: relative;
+    display: inline-block;
+    grid-area: d_d;
+}
+
+.dropbtn {
+    background-color: darkslategray;
+    color: white;
+    padding: 22px;
+    height: 65px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    margin-left: 0;
+    display: none;
+    position: absolute;
+    background-color: rgb(10,50,50);
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Comfortaa', cursive;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.dropdown-content a {
+    margin-left: 0px;
+    color: white;
+    background: darkslategray;
+    padding: 5px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+
+
+.dropdown-content a:hover {
+    background-color:crimson;
+    cursor: pointer;
+}
+.dropdown-content :hover {
+    border-bottom-right-radius: 5px;
+}
+
+.dropDown:hover .dropdown-content {
+    display: block;
+
+}
+.dropbtn:hover{
+    cursor: pointer;
+}
+
+.dropDown:hover .dropbtn {
+    background-color: rgb(170,17,40);
+}
+
+.L_container{
+    grid-area: L_c;
+    background: white;
+}
+
+.R_container{
+    grid-area: R_c;
+    background: white;
+}
+
+
+.heads{
+    margin-top: 2px;
+    grid-area: h;
+    background: dodgerblue;
+    position: fixed;
+    width: 100.7%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 120px 90px 300px 1fr 100px;
+    grid-template-rows: 1fr 3px 50px;
+    grid-template-areas:
+            " h_l h_c1 h_c2 h_c3 h_r "
+            ". . . . . "
+            " . navi navi navi . ";
+}
+.h_left{
+    grid-area: h_l;
+    background: darkslategray;
+}
+
+.h_center1{
+    grid-area: h_c1;
+    background: white;
+}
+.h_center1 img{
+     width: 40px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     margin-left: 40px;
+ }
+.h_center2 h2{
+    width: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Comfortaa', cursive;
+    color: darkslategray;
+}
+
+
+
+.h_center2{
+    grid-area: h_c2;
+    background: white;
+}
+.h_center3{
+    grid-area: h_c3;
+    background: darkslategray;
+    border-bottom-left-radius: 10px;
+
+}
+.h_right{
+    grid-area: h_r;
+    background: darkslategray;
+}
+
+
+
+.bodys{
+    grid-area: b;
+    background: white;
+
+    display: grid;
+    margin: -10px;
+
+
+}
+
+
+
+.footers{
+    grid-area: f;
+    background: darkslategray;
+    margin-bottom: -10px;
+    float: bottom;
+
+}
+
+.search-container {
+    grid-area: search;
+    margin-top: 0px;
+}
+
+.search-container form {
+    float: right;
+    margin-right: 10px;
+}
+.search-container form input{
+    border-radius: 5px;
+    line-height: 30px;
+    border-style: none;
+    width: 235px;
+    padding-left: 10px;
+}
+
+.search-container form button{
+
+    width: 30px;
+    height: 25px;
+    border-radius: 3px;
+    border-style: none;
+    margin-top: 12px;
+    background: white;
+    color: darkslategrey;
+}
+
+.search-container button:hover{
+
+    background: crimson;
+    cursor: pointer;
+    border-radius: 3px;
+    color: white;
+}
+
+.search-container form input:hover{
+
+    background: whitesmoke;
+    cursor: revert;
+    border-radius: 3px;
+    color: white;
+}
+
+
+
+
